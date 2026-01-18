@@ -291,7 +291,72 @@ body {
     margin-bottom: 0;
 }
 
-.sec6-btn {
+
+
+.section-4 {
+    background-color: var(--hintergrund-color);
+    padding: 20px 100px 80px 100px;
+}
+
+.slider {
+    position: relative;
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.slider-image-wrapper {
+    overflow: hidden;
+    border-radius: 40px;
+    aspect-ratio: 16 / 9;
+    /* базовое соотношение */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+.slider img.fade-out {
+    opacity: 0;
+    transform: scale(1.03);
+}
+
+.slider img.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+    background-color: transparent;
+}
+
+.slider-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.slider-btn.left {
+    left: -40px;
+}
+
+.slider-btn.right {
+    right: -40px;
+}
+
+.sec4-btn {
     background-color: var(--button-color);
     color: var(--brand-white);
     padding: 21px 32px;
@@ -303,9 +368,12 @@ body {
     transition: 0.3s;
     margin-top: 69px;
     text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 69px;
 }
 
-.sec6-btn:hover {
+.sec4-btn:hover {
     background-color: var(--button-hover-color);
     transform: translateY(-2px);
 }
